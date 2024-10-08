@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philippines Travel Guide</title>
+
+    
+    <!-- Switch Theme -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle CSS</title>
+    <link id="stylesheet" rel="stylesheet" href="css1.css">
+    <script>
+        function toggleStylesheet() {
+            const stylesheet = document.getElementById('stylesheet');
+            if (stylesheet.getAttribute('href') === 'css1.css') {
+                stylesheet.setAttribute('href', 'css2.css');
+            } else {
+                stylesheet.setAttribute('href', 'css1.css');
+            }
+        }
+    </script>
+</head>
+
+
+
+<body>
+    <header>
+        <h1>Explore Philippines</h1>
+        <nav>
+            <button class="switch-theme-button" onclick="toggleStylesheet()">Switch Theme</button>
+            <button class="nav-button" onclick="showSection('home')">Home</button>
+            <button class="nav-button" onclick="showSection('tourist-spots')">Tourist Spots</button>
+            <button class="nav-button" onclick="showSection('local-cuisines')">Local Cuisines</button>
+            <button class="nav-button" onclick="showSection('history')">History</button>
+            <button class="nav-button" onclick="showSection('hotels')">Hotels</button>
+            
+        </nav>
+        
+    </header>
+    <main>
+
+        
+        <!-- Home Section -->
+
+    <section id="home" class="section active">
+        <div class="intro">
+            <h2>Welcome to the Philippines</h2>
+            <p>Discover the beauty, culture, and history of the Philippines</p>
+        </div>
+        <div class="home-card">
+            <h3>Popular Destinations</h3>
+            <div class="home-cards">
+                <div class="home-card-item">
+                    <img src="palawan.jpg" alt="Destination 1">
+                    <p>Palawan - Known for its crystal-clear waters and stunning limestone cliffs.</p>
+                </div>
+                <div class="home-card-item">
+                    <img src="cebu.jpg" alt="Destination 2">
+                    <p>Cebu - Famous for its historical landmarks and beautiful beaches.</p>
+                </div>
+                <div class="home-card-item">
+                    <img src="manila.jpg" alt="Destination 3">
+                    <p>Manila - The vibrant capital city with rich history and culture.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="home-card">
+            <h3>Best Adventures</h3>
+            <div class="home-cards">
+                <div class="home-card-item">
+                    <img src="scuba.jpg" alt="Adventure 1">
+                    <p>Scuba Diving - Explore the underwater world in Tubbataha Reefs.</p>
+                </div>
+                <div class="home-card-item">
+                    <img src="hiking.jpg" alt="Adventure 2">
+                    <p>Hiking - Conquer the trails of Mount Pulag for breathtaking views.</p>
+                </div>
+                <div class="home-card-item">
+                    <img src="island-hopping.jpg" alt="Adventure 3">
+                    <p>Island Hopping - Discover the beauty of the Visayas islands.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="home-card">
+            <h3>About This Website</h3>
+            <p>This website provides a comprehensive guide to exploring the Philippines. Whether you are looking for the best tourist spots, local cuisines, or historical insights, we have you covered. Enjoy your virtual tour and plan your next adventure!</p>
+        </div>
+    </section>
+
+
+        <!-- Tourist Spots Section -->
+        <section id="tourist-spots" class="section">
+            <h2>Top Tourist Spots</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="boracay.jpg" alt="Boracay Beach">
+                    <h3>Boracay Beach</h3>
+                    <button onclick="showDetail('boracay')">See More</button>
+                </div>
+                <div class="card">
+                    <img src="chocolate-hills.jpg" alt="Chocolate Hills">
+                    <h3>Chocolate Hills</h3>
+                    <button onclick="showDetail('chocolate-hills')">See More</button>
+                </div>
+                <div class="card">
+                    <img src="taal-volcano.jpg" alt="Taal Volcano">
+                    <h3>Taal Volcano</h3>
+                    <button onclick="showDetail('taal-volcano')">See More</button>
+                </div>
+                <div class="card">
+                    <img src="mayon.jpg" alt="Mayon Volcano">
+                    <h3>Mayon Volcano</h3>
+                    <button onclick="showDetail('mayon-volcano')">See More</button>
+                </div>
+                <!-- Add more tourist spots here if needed -->
+            </div>
+        </section>
+
+
+        <!-- Local Cuisines Section -->
+        <section id="local-cuisines" class="section">
+            <h2>Local Cuisines</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="adobo.jpg" alt="Adobo">
+                    <h3>Adobo</h3>
+                    <button onclick="showDetail('adobo')">See More</button>
+                </div>
+                <div class="card">
+                    <img src="sinigang.jpg" alt="Sinigang">
+                    <h3>Sinigang</h3>
+                    <button onclick="showDetail('sinigang')">See More</button>
+                </div>
+                <div class="card">
+                    <img src="lechon.jpg" alt="Lechon">
+                    <h3>Lechon</h3>
+                    <button onclick="showDetail('lechon')">See More</button>
+                </div>
+                <div class="card">
+                    <img src="karekare.jpg" alt="Kare-Kare">
+                    <h3>Kare-Kare</h3>
+                    <button onclick="showDetail('kare-kare')">See More</button>
+                </div>
+                <!-- Add more cuisines here if needed -->
+            </div>
+        </section>
+
+
+        <!-- History Section -->
+        <section id="history" class="section">
+            <h2>Historical Insights</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="spanishcolonization.jpg" alt="Spanish Colonization">
+                    <h3>Spanish Colonization</h3>
+                    <button onclick="showDetail('spanish-colonization')">See More</button>
+                </div>
+                <div class="card">
+                    <img src="japaneseoccupation.jpg" alt="Japanese Occupation">
+                    <h3>Japanese Occupation</h3>
+                    <button onclick="showDetail('japanese-occupation')">See More</button>
+                </div>
+                <div class="card">
+                    <img src="americanperiod.jpg" alt="American Period">
+                    <h3>American Period</h3>
+                    <button onclick="showDetail('american-period')">See More</button>
+                </div>
+                <div class="card">
+                    <img src="independence.jpg" alt="Independence Movement">
+                    <h3>Independence Movement</h3>
+                    <button onclick="showDetail('independence-movement')">See More</button>
+                </div>
+                <!-- Add more history here if needed -->
+            </div>
+        </section>
+
+
+        <!-- Hotel Section-->
+        <section id="hotels" class="section">
+            <h2>Hotels</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="hotel1.jpg" alt="Hotel">
+                    <h3>Holiday Inn Express Manila Newport City, an IHG Hotel</h3>
+                    <button onclick="showDetail('hotel1')">See More</button>
+                </div>
+                <div class="card">
+                    <img src="hotel2.jpg" alt="Hotel">
+                    <h3>Hue Hotels and Resorts Boracay Managed by HII</h3>
+                    <button onclick="showDetail('hotel2')">See More</button>
+                </div>
+                <div class="card">
+                    <img src="hotel3.jpg" alt="Hotel">
+                    <h3>Loboc River Resort</h3>
+                    <button onclick="showDetail('hotel3')">See More</button>
+                </div>
+                <div class="card">
+                    <img src="hotel4.jpg" alt="Hotel">
+                    <h3>Casa Simeon</h3>
+                    <button onclick="showDetail('hotel4')">See More</button>
+                </div>
+
+                
+                
+
+                
+                
+            
+                
+                <!-- Add more hotels here if needed -->
+            </div>
+        </section>
+
+
+        <!-- Detail Modal -->
+        <div id="detail-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button" onclick="closeModal()">&times;</span>
+                <div id="detail-content"></div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+    <footer>
+        <p>&copy; 2024 Web Systems and Technologies</p>
+    </footer>
+
+
+
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+
+        function showDetail(detailId) {
+            const modal = document.getElementById('detail-modal');
+            const detailContent = document.getElementById('detail-content');
+            let content = '';
+
+            
+            if (detailId === 'boracay') {
+                content = `
+                    <h2>Boracay Beach</h2>
+                    <img src="boracay.jpg" alt="Boracay Beach">
+                    <p>Boracay is famous for its white sandy beaches and vibrant nightlife. It's a perfect destination for both relaxation and adventure.</p>
+                    <a href="https://www.google.com/maps/place/Boracay+Island/@11.9672101,121.9161997,15z/data=!4m6!3m5!1s0x33a53d25c5975257:0x528e1abf42332021!8m2!3d11.9683021!4d121.9189464!16s%2Fg%2F11fd03y_1k?entry=ttu&g_ep=EgoyMDI0MDkxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="map-button">View on Google Maps</a>
+                    <img src="https://via.placeholder.com/600x400" alt="Boracay Beach Map Screenshot" class="map-screenshot">
+                `;
+            } 
+            
+            
+            else if (detailId === 'chocolate-hills') {
+                content = `
+                    <h2>Chocolate Hills</h2>
+                    <img src="chocolate-hills.jpg" alt="Chocolate Hills">
+                    <p>The Chocolate Hills are a geological formation located in the Bohol province. They are known for their unique, dome-shaped hills that turn brown in the dry season.</p>
+                    <a href="https://www.google.com/maps/place/Chocolate+Hills" target="_blank" class="map-button">View on Google Maps</a>
+                    <img src="https://via.placeholder.com/600x400" alt="Chocolate Hills Map Screenshot" class="map-screenshot">
+                `;
+            } 
+            
+            
+            else if (detailId === 'taal-volcano') {
+                content = `
+                    <h2>Taal Volcano</h2>
+                    <img src="taal-volcano.jpg" alt="Taal Volcano">
+                    <p>Taal Volcano is one of the Philippines' most active volcanoes and is located in the province of Batangas. It is known for its stunning crater lake.</p>
+                    <a href="https://www.google.com/maps/place/Taal+Volcano" target="_blank" class="map-button">View on Google Maps</a>
+                    <img src="https://via.placeholder.com/600x400" alt="Taal Volcano Map Screenshot" class="map-screenshot">
+                `;
+            } 
+            
+            
+            else if (detailId === 'mayon-volcano') {
+                content = `
+                    <h2>Mayon Volcano</h2>
+                    <img src="mayon.jpg" alt="Mayon Volcano">
+                    <p>Mayon Volcano is renowned for its perfect cone shape and is an active volcano located in the Bicol region. It is one of the most picturesque volcanoes in the world.</p>
+                    <a href="https://www.google.com/maps/place/Mayon+Volcano" target="_blank" class="map-button">View on Google Maps</a>
+                    <img src="https://via.placeholder.com/600x400" alt="Mayon Volcano Map Screenshot" class="map-screenshot">
+                `;
+            } 
+            
+            
+            else if (detailId === 'adobo') {
+                content = `
+                    <h2>Adobo</h2>
+                    <img src="adobo.jpg" alt="Adobo">
+                    <p>Adobo is a popular Filipino dish marinated in vinegar, soy sauce, garlic, and spices. It's known for its rich and savory flavor.</p>
+                `;
+            } 
+            
+            else if (detailId === 'sinigang') {
+                content = `
+                    <h2>Sinigang</h2>
+                    <img src="sinigang.jpg" alt="Sinigang">
+                    <p>Sinigang is a sour soup or stew commonly made with tamarind, tomatoes, and various vegetables, often with pork, shrimp, or fish. It is a comforting and tangy dish loved by many Filipinos.</p>
+                `;
+            } 
+            
+            
+            else if (detailId === 'lechon') {
+                content = `
+                    <h2>Lechon</h2>
+                    <img src="lechon.jpg" alt="Lechon">
+                    <p>Lechon is a popular Filipino dish featuring a whole roasted pig, seasoned and cooked until crispy on the outside and tender on the inside. It's often served during festive occasions.</p>
+                `;
+            } 
+            
+            
+            else if (detailId === 'kare-kare') {
+                content = `
+                    <h2>Kare-Kare</h2>
+                    <img src="karekare.jpg" alt="Kare-Kare">
+                    <p>Kare-Kare is a Filipino stew made with oxtail, tripe, and vegetables in a rich peanut sauce. It is usually served with bagoong (fermented shrimp paste) on the side.</p>
+                    <p>  </p>
+                    <p>  </p>
+                    <p>  </p>
+                    <p>  </p>
+                    <p>  </p>
+                    <p>  </p>
+                    <p>  </p>
+                `;
+            } 
+            
+            
+            else if (detailId === 'spanish-colonization') {
+                content = `
+                    <h2>Spanish Colonization</h2>
+                    <img src="spanishcolonization.jpg" alt="Spanish Colonization">
+                    <p> The Spanish colonization of the Philippines began in 1565 when Spanish explorer Miguel López de Legazpi arrived and established the first permanent Spanish settlement on the island of Cebu. This marked the beginning of over 300 years of Spanish rule in the Philippines, which lasted until 1898. </p>
+                    <p> Key Phases of Colonization: </p>\
+                    <p> Exploration and Settlement (1521-1571): </p>
+                    <p> Spanish contact with the Philippines began in 1521 when Ferdinand Magellan arrived, but his death at the hands of Lapu-Lapu delayed colonization efforts. It wasn't until 1565 that Miguel López de Legazpi established the first permanent Spanish settlement in Cebu. From there, Spanish influence expanded across the archipelago, culminating in the capture of Manila in 1571. Manila became the capital and a strategic trading hub, marking the start of formal Spanish rule. This period laid the groundwork for nearly 300 years of Spanish domination. </p>
+                    <p> Political and Religious Control: </p>
+                    <p> Spain established a centralized government system in the Philippines, ruled by a Governor-General who acted on behalf of the Spanish monarchy. The country was integrated into the Spanish Empire and was governed as part of the Viceroyalty of New Spain. Catholic missionaries, especially from the Augustinian, Dominican, and Jesuit orders, played a key role in spreading Christianity and converting most Filipinos. The Catholic Church became highly influential, controlling large amounts of land and acting as a political force. This resulted in a deep intertwining of politics and religion, with Catholicism becoming a cornerstone of Filipino society. </p>
+                    <p> Economic Changes: </p>
+                    <p> The Philippines became a crucial part of the trans-Pacific Galleon Trade between Manila and Acapulco, facilitating global trade between Asia and the Americas. This brought economic opportunities but also linked the colony to the larger Spanish imperial economy. The encomienda system granted Spanish settlers control over local lands and labor, forcing Filipinos to pay tribute and work for them. This disrupted indigenous economic practices and led to the exploitation of many local communities. Though the galleon trade enriched Spanish merchants, most Filipinos remained impoverished under colonial rule. </p>
+                    <p> Resistance and Revolts: </p>
+                    <p> Throughout the Spanish colonization, Filipinos resisted foreign rule in various ways, including revolts and rebellions. One of the longest was the Dagohoy Rebellion (1744–1829), lasting nearly 85 years, fueled by grievances over Spanish exploitation and forced labor. In the southern Philippines, the Muslim population, known as Moros, fiercely resisted both Spanish control and Christian conversion efforts. Their resistance prevented Spain from fully controlling Mindanao and the Sulu Archipelago. Despite these uprisings, Spanish forces were able to suppress most revolts until the late 19th century. </p>
+                    <p> Decline and End of Spanish Rule: </p>
+                    <p> By the late 19th century, dissatisfaction with Spanish rule grew due to corruption, economic inequality, and nationalist sentiments. The Philippine Revolution erupted in 1896, led by figures like José Rizal and Andrés Bonifacio, aiming to end Spanish oppression. The revolution weakened Spanish control, and their defeat in the Spanish-American War of 1898 marked the final blow. Spain ceded the Philippines to the United States in the Treaty of Paris, officially ending more than 300 years of Spanish colonization. This transition set the stage for a new chapter of American rule in the Philippines. </p>
+                    <p> The Spanish colonization of the Philippines profoundly shaped the country’s social, political, and religious landscape, leaving a legacy that is still visible today, especially in its widespread Catholicism and cultural customs. </p>
+                
+                `;
+            } 
+            
+            
+            else if (detailId === 'japanese-occupation') {
+                content = `
+                    <h2>Japanese Occupation</h2>
+                    <img src="japaneseoccupation.jpg" alt="Japanese Occupation">
+                    <p>During World War II, the Philippines was occupied by Japan from 1942 to 1945, which had a profound impact on the country's history and its people.</p>
+                    <p>  </p>
+                    <p>  </p>
+                    <p>  </p>
+                    <p>  </p>
+                    <p>  </p>
+                    <p>  </p>
+                    <p>  </p>
+                `;
+            } 
+            
+            
+            else if (detailId === 'american-period') {
+                content = `
+                    <h2>American Period</h2>
+                    <img src="americanperiod.jpg" alt="American Period">
+                    <p>After Spanish rule, the Philippines was governed by the United States from 1898 to 1946, which brought changes in education, infrastructure, and governance.</p>
+                    <p>  </p>
+                    <p>  </p>
+                    <p>  </p>
+                    <p>  </p>
+                    <p>  </p>
+                    <p>  </p>
+                    <p>  </p>
+                `;
+
+            } 
+            
+            
+            else if (detailId === 'independence-movement') {
+                content = `
+                    <h2>Independence Movement</h2>
+                    <img src="independence.jpg" alt="Independence Movement">
+                    <p>The Philippines' struggle for independence led to the end of colonial rule and the establishment of the Republic of the Philippines in 1946.</p>
+                    <p>  </p>
+                    <p>  </p>
+                    <p>  </p>
+                    <p>  </p>
+                    <p>  </p>
+                    <p>  </p>
+                    <p>  </p>
+                `;
+            }
+
+
+
+
+            else if (detailId === 'hotel1') {
+                content = `
+                    <h2>Holiday Inn Express Manila Newport City, an IHG Hotelt</h2>
+                    <img src="hotel1.jpg" alt="Holiday Inn Express Manila Newport City, an IHG Hotel">
+                    <h3> Holiday Inn Express Manila Newport City, an IHG Hotelt </h3>
+                    
+                    <a href="https://www.ihg.com/holidayinnexpress/hotels/us/en/pasay/mnlrm/hoteldetail?cm_mmc=GoogleMaps-_-EX-_-PH-_-MNLRM" target="_blank" class="map-button">View website</a>
+                    <a href="https://www.google.com/maps/place/Holiday+Inn+Express+Manila+Newport+City,+an+IHG+Hotel/@14.5179519,121.0165958,862m/data=!3m1!1e3!4m9!3m8!1s0x3397cecdc88974d9:0x3117728a120943d1!5m2!4m1!1i2!8m2!3d14.5179519!4d121.0191707!16s%2Fg%2F1hd_fk8gr?entry=ttu&g_ep=EgoyMDI0MTAwMi4xIKXMDSoASAFQAw%3D%3D" target="_blank" class="map-button">View on Google Maps</a>
+                    <p> A 2-minute drive from Ninoy Aquino International Airport (Terminal 3) and located within Newport World Resorts, Holiday Inn Express Manila Newport City offers air-conditioned rooms and apartments. It is within a 5-minute walk from The Run Way Manila, a bridge from Ninoy Aquino International Airport Terminal 3. </p>
+                    <p> The modern rooms and apartments all come with a 32-inch flat-screen TV and a personal safe. Apartments also have an extra sofa bed and a kitchenette. En suite bathrooms feature hot-water showers and free toiletries. </p>
+                    <p> Holiday Inn Express Manila Newport City is a 15-minute drive from Mckinley Hill and Taguig Business District. Makati Business District is a 30-minute drive away. </p>
+                    <p> Guests can rent a car to explore the area, or request for laundry and dry cleaning services. The hotel also provides luggage storage at its 24-hour front desk. Drinks and snacks vending machines are available at every floor. </p>
+                    <p> Located at the lobby, Express Bar offers a hearty selection of pastries, cakes and salads. A variety of drinks including coffee, beers and cocktails are also served. </p>
+                    <p> Couples particularly like the location — they rated it 8.7 for a two-person trip. </p> 
+                    <br>
+                    <h4> Most popular facilities </h4>
+                    <p> Free WiFi </p>
+                    <p> Fitness centre </p>
+                    <p> Non-smoking rooms </p>
+                    <p> 2 restaurants </p>
+                    <p> 24-hour front desk </p>
+                    <p> Facilities for disabled guests </p>
+                    <p> Bar </p>
+                    <p> Laundry </p>
+                    <p> Lift </p>
+                    <p> Breakfast </p>
+
+                `;
+            }
+
+            else if (detailId === 'hotel2') {
+                content = `
+                    <h2>Hue Hotels and Resorts Boracay Managed by HII</h2>
+                    <img src="hotel2.jpg" alt="Hue Hotels and Resorts Boracay Managed by HII">
+                    <h3> Hue Hotels and Resorts Boracay Managed by HII </h3>
+                    
+                    <a href="https://boracay.thehuehotel.com" target="_blank" class="map-button">View website</a>
+                    <a href="https://www.google.com/maps/place/Hue+Hotels+and+Resorts+Boracay/@11.9566639,121.9280033,871m/data=!3m1!1e3!4m9!3m8!1s0x33a53c26d4158b45:0x6467b9ff1237ba0b!5m2!4m1!1i2!8m2!3d11.9566639!4d121.9305782!16s%2Fg%2F11dymvjg29?entry=ttu&g_ep=EgoyMDI0MTAwMi4xIKXMDSoASAFQAw%3D%3D" target="_blank" class="map-button">View on Google Maps</a>
+                    
+                    <p> Located at Station 2, Hue Hotels and Resorts Boracay Managed by HII offers accommodation in Boracay. It features an outdoor swimming pool and guests can enjoy meals at the in-house restaurant or have a drink at the bar. Free WiFi is available in all rooms. </p>
+                    <p> It is 27 metres to Station X. Boracay White Beach is 1.1 km from Hue Hotels and Resorts Boracay Managed by HII, while Willy's Rock is 3.4 km away. The nearest airport is Godofredo P. Ramos (Caticlan) Airport, 4 km from the property. Airport transfers are available at additional charges. </p>
+                    <p> All rooms are equipped with a flat-screen TV. Rooms are fitted with a private bathroom equipped with a bidet. For your comfort, you will find slippers, free toiletries and a hairdryer. </p>
+                    <p> Guests can approach the 24-hour front desk for tour arrangements, luggage storage and concierge services. </p>
+                    <p> Couples particularly like the location — they rated it 8.8 for a two-person trip. </p>
+                    <br>
+                    <h4> Most popular facilities </h4>
+                    <p> Outdoor swimming pool </p>
+                    <p> Free WiFi </p>
+                    <p> Airport shuttle </p>
+                    <p> Family rooms </p>
+                    <p> Fitness centre </p>
+                    <p> Spa and wellness centre </p>
+                    <p> Restaurant </p>
+                    <p> Tea/coffee maker in all rooms </p>
+                    <p> Bar </p>
+                    <p> Good breakfast </p>
+
+                `;
+            }
+
+            else if (detailId === 'hotel3') {
+                content = `
+                    <h2>Loboc River Resort</h2>
+                    <img src="hotel3.jpg" alt="Loboc River Resort">
+                    <h3> Loboc River Resort </h3>
+                    
+                    <a href="https://lobocriverresort.com" target="_blank" class="map-button">View website</a>
+                    <a href="https://www.google.com/maps/place/Loboc+River+Resort/@9.6268414,124.0103926,1755m/data=!3m1!1e3!4m13!1m2!2m1!1sLoboc+River+Resort+website!3m9!1s0x33aa4459ed12f92f:0x80d39c895652179!5m2!4m1!1i2!8m2!3d9.6268414!4d124.0199198!15sChpMb2JvYyBSaXZlciBSZXNvcnQgd2Vic2l0ZVocIhpsb2JvYyByaXZlciByZXNvcnQgd2Vic2l0ZZIBDHJlc29ydF9ob3RlbOABAA!16s%2Fg%2F1vrq755z?entry=ttu&g_ep=EgoyMDI0MTAwMi4xIKXMDSoASAFQAw%3D%3D" target="_blank" class="map-button">View on Google Maps</a>
+                    
+                    <p> Sitting on the banks of the Loboc River, the Loboc River Resort offers rooms that combine wood and local materials with modern comforts. It features a restaurant, bar, and souvenir shop. </p>
+                    <p> Loboc River Resort is a 45-minute drive from Tagbilaran Airport. It is 20 minutes’ drive from the Loboc Tarsier Sanctuary. Attractions such as the Zoocolate and Danao Zipline can be reached in 15 minutes by car. </p>
+                    <p> Offering garden or river views, the air-conditioned rooms come with private balconies and cable TV. Each room has an en suite bathroom with a shower. Some rooms also include a kitchenette and seating area. </p>
+                    <p> Guests can enjoy a relaxing massage at the resort. Staff can arrange boat rentals and activities like trekking and firefly watching. Car rentals and laundry services are available. </p>
+                    <p> Local and international dishes are served at the restaurant and bar. The Floating Restaurant is a 10-minute drive away. </p>
+                    <p> Couples particularly like the location — they rated it 9.0 for a two-person trip. </p>
+                    <br>
+                    <h4> Most popular facilities </h4>
+                    <p> Outdoor swimming pool </p>
+                    <p> Airport shuttle </p>
+                    <p> Non-smoking rooms </p>
+                    <p> Room service </p>
+                    <p> Free parking </p>
+                    <p> Restaurant </p>
+                    <p> Spa and wellness centre </p>
+                    <p> Tea/coffee maker in all rooms </p>
+                    <p> Bar </p>
+                    <p> Very Good breakfast </p>
+
+                `;
+            }
+
+            else if (detailId === 'hotel4') {
+                content = `
+                    <h2>Casa Simeon</h2>
+                    <img src="hotel4.jpg" alt="Casa Simeon">
+                    <h3> Casa Simeon </h3>
+                    
+                    <a href="https://www.facebook.com/casasimeon/" target="_blank" class="map-button">View website</a>
+                    <a href="https://www.google.com/maps/place/Casa+Simeon+Specialty+Accommodations+%26+Dining/@13.3043103,123.7353375,20172m/data=!3m1!1e3!4m13!1m2!2m1!1scasa+simeon+website!3m9!1s0x33a054ac725f1d57:0x1cd64429683a8931!5m2!4m1!1i2!8m2!3d13.2917449!4d123.7923175!15sChNjYXNhIHNpbWVvbiB3ZWJzaXRlWhUiE2Nhc2Egc2ltZW9uIHdlYnNpdGWSAQVob3RlbOABAA!16s%2Fg%2F11f381n_h6?entry=ttu&g_ep=EgoyMDI0MTAwMi4xIKXMDSoASAFQAw%3D%3D" target="_blank" class="map-button">View on Google Maps</a>
+                    
+                    <p> Genius discounts at this property are subject to book dates, stay dates and other available deals. </p>
+                    <p> Set in Bacacay, 25 km from Cagsawa Ruins, Casa Simeon offers accommodation with a garden, free private parking, a terrace and a restaurant. Built in 1920, this 3-star hotel is within 21 km of Ibalong Centrum for Recreation and 21 km of Mayon Volcano. The accommodation provides a 24-hour front desk, airport transfers, room service and free WiFi. </p>
+                    <p> The nearest airport is Bicol International Airport, 29 km from the hotel. </p>
+                    <p> Couples particularly like the location — they rated it 9.4 for a two-person trip. </p>
+                    <br>
+                    <h4> Most popular facilities </h4>
+                    <p> Airport shuttle </p>
+                    <p> Non-smoking room </p>
+                    <p> Room service </p>
+                    <p> Restaurant </p>
+                    <p> Free parking </p>
+                    <p> Free WiFi </p>
+                    <p> Family rooms </p>
+                    <p> Breakfast </p>
+
+                `;
+            }
+
+            detailContent.innerHTML = content;
+            modal.style.display = 'block';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('detail-modal');
+            modal.style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('detail-modal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+
+
+</body>
+</html>
